@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Enabled Surveillance System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .icon {
+            font-size: 24px;
+            margin: 10px;
+            color: #007bff;
+        }
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+            color: white;
+        }
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+        .section-header {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .card {
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container animate__animated animate__fadeIn">
+        <h1 class="text-center">AI-Enabled Surveillance System</h1>
+        <h2 class="text-center">Chido, Telone Center for Learning (2025)</h2>
+        
+        <section class="mt-5">
+            <h3 class="section-header">Introduction/Overview</h3>
+            <p>This project proposes the development of an AI-enabled smart surveillance system to enhance real-time security monitoring at telecommunications base stations. Traditional security methods often result in delayed responses to potential threats, which can lead to significant financial losses and service disruptions. By leveraging AI technology, this project aims to improve detection and response times, ensuring the reliability and resilience of telecommunications services.</p>
+            <p>The primary objective is to investigate the feasibility and effectiveness of integrating AI into surveillance systems for telecommunications base stations, focusing on object detection, anomaly identification, and predictive security measures.</p>
+        </section>
+        
+        <section class="mt-5">
+            <h3 class="section-header">Background</h3>
+            <p>Telecommunications base stations face significant security threats, both physically and cyber-wise, including theft, vandalism, and cyberattacks. Current security measures often result in high false alarm rates and slow response times, highlighting the need for advanced AI-driven surveillance systems to enhance real-time monitoring and predictive security.</p>
+            <p>Recent breaches underscore the urgency of integrating AI into surveillance systems to pre-empt both physical and cyber threats. This project aims to address these challenges by developing an AI-enabled smart surveillance system that unifies physical and cyber threat detection, reduces false alarms, and enables proactive security measures.</p>
+        </section>
+        
+        <section class="mt-5">
+            <h3 class="section-header">Statement of the Problem</h3>
+            <p>Telecommunications base stations are vulnerable to theft, vandalism, and cyberattacks, leading to substantial financial losses and service disruptions. Current security measures often result in false alarms and slow responses, underscoring the need for advanced solutions like AI-driven surveillance systems to enhance real-time monitoring and predictive security.</p>
+        </section>
+        
+        <section class="mt-5">
+            <h3 class="section-header">Research Objectives</h3>
+            <p>Main Objective: Implement an AI-enabled surveillance system for real-time security monitoring.</p>
+            <p>Sub-Objectives:</p>
+            <ul>
+                <li>Enhance threat detection capabilities using AI algorithms.</li>
+                <li>Improve response times to security incidents.</li>
+                <li>Ensure the system is scalable for various infrastructure types.</li>
+            </ul>
+        </section>
+        
+        <section class="mt-5">
+            <h3 class="section-header">Research Questions</h3>
+            <p>Main Research Question: How can an AI-enabled surveillance system enhance the security of telecommunications base stations?</p>
+            <p>Sub-Research Questions:</p>
+            <ul>
+                <li>What are the most effective AI algorithms for improving threat detection in real-time surveillance systems?</li>
+                <li>How can AI-driven surveillance systems reduce response times to security incidents?</li>
+                <li>What strategies can be employed to minimize false security alerts in AI-enabled surveillance systems?</li>
+                <li>What are the key factors influencing the scalability of AI-enabled surveillance systems across different infrastructure types?</li>
+            </ul>
+        </section>
+        
+        <section class="mt-5">
+            <h3 class="section-header">Assumptions</h3>
+            <p>Key assumptions include:</p>
+            <ul>
+                <li>Infrastructure Compatibility: Existing surveillance infrastructure can be integrated with the proposed AI system.</li>
+                <li>Stakeholder Cooperation: Telecom operators will provide necessary access and support for system testing and deployment.</li>
+                <li>AI Performance: AI algorithms will achieve sufficient accuracy to detect threats with minimal human intervention.</li>
+                <li>Resource Stability: Base stations will maintain stable power and internet connectivity for real-time monitoring.</li>
+            </ul>
+        </section>
+        
+        <section class="mt-5">
+            <h3 class="section-header">Significance of the Project</h3>
+            <p>This project enhances security by integrating AI into surveillance systems, improving detection and response times against physical and cyber threats. It also automates tasks, reduces false alarms, and supports the reliability and resilience of telecommunications services. Additionally, AI systems can adapt to new threats, ensuring ongoing security effectiveness.</p>
+        </section>
+        
+        <section class="mt-5">
+            <h3 class="section-header">Methodology</h3>
+            <p>The project will implement an AI-enabled surveillance system using AI algorithms like YOLO for object detection, Autoencoders for anomaly detection, and CNNs for image classification. LSTM networks will be used for time-series analysis to predict potential security breaches based on historical data. The system will integrate with existing infrastructure using edge computing devices for low latency and real-time processing.</p>
+            <p>Tools and technologies include Python, TensorFlow, PyTorch, edge devices (NVIDIA Jetson), IP cameras, motion sensors, cloud storage, and SQL databases for data management. Real-time dashboards will be developed using Power BI or Tableau.</p>
+        </section>
+        
+        <section class="mt-5">
+            <h3 class="section-header">Key Features</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <i class="fa-solid fa-lock icon"></i>
+                            <h5>Real-time Threat Detection</h5>
+                            <p>AI algorithms like YOLO and Autoencoders analyze video feeds and sensor data for real-time threat detection.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <i class="fa-solid fa-chart-line icon"></i>
+                            <h5>Anomaly Identification</h5>
+                            <p>AI-driven analytics reduce false alarms by identifying anomalies in real-time.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <i class="fa-solid fa-cog icon"></i>
+                            <h5>AI-Driven Analytics</h5>
+                            <p>Predictive security measures are enabled through advanced AI analytics.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+ <section class="mt-5" style="margin-bottom:25px;text-align:center;max-width:100%;overflow-x:auto;">
+<strong>System Architecture Diagram</strong><br>
+<img src="architecture.png" />
+</section>
+
+        <section class="mt-5" style="margin-bottom:25px;">
+            <h3 class="section-header">Explore More</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <button class="btn btn-primary" onclick="showObjectives()">View System Objectives</button>
+                </div>
+                <div class="col-md-4">
+                    <button class="btn btn-secondary" onclick="showResearchQuestions()">View Research Questions</button>
+                </div>
+                <div class="col-md-4">
+                    <button class="btn btn-primary" onclick="showMethodology()">View Methodology</button>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-4">
+                    <button class="btn btn-secondary" onclick="showAIAlgorithms()">View AI Algorithms</button>
+                </div>
+                <div class="col-md-4">
+                    <button class="btn btn-primary" onclick="showDownloadDocumentation()">Download Documentation</button>
+                </div>
+                <div class="col-md-4">
+                    <button class="btn btn-secondary" onclick="showUnderConstruction()">View System Video</button>
+                </div>
+            </div>
+        </section>
+        
+        <div id="infoDisplay" style="display:none;"></div>
+        
+        <!-- Modal -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modalTitle"></h2>
+                <p id="modalMessage"></p>
+                <button class="btn btn-primary" id="proceedDownload" style="display:none;">Proceed to Download</button>
+                <button class="btn btn-secondary" id="cancelDownload" style="display:none;">Cancel</button>
+            </div>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            var modal = document.getElementById("myModal");
+            var span = document.getElementsByClassName("close")[0];
+            
+            function showObjectives() {
+                document.getElementById("infoDisplay").innerHTML = `
+                    <h3>System Objectives</h3>
+                    <p>Main Objective: Implement an AI-enabled surveillance system for real-time security monitoring.</p>
+                    <p>Sub-Objectives:</p>
+                    <ul>
+                        <li>Enhance threat detection capabilities using AI algorithms.</li>
+                        <li>Improve response times to security incidents.</li>
+                        <li>Ensure the system is scalable for various infrastructure types.</li>
+                    </ul>
+                `;
+                document.getElementById("infoDisplay").style.display = "block";
+            }
+            
+            function showResearchQuestions() {
+                document.getElementById("infoDisplay").innerHTML = `
+                    <h3>Research Questions</h3>
+                    <p>Main Research Question: How can an AI-enabled surveillance system enhance the security of telecommunications base stations?</p>
+                    <p>Sub-Research Questions:</p>
+                    <ul>
+                        <li>What are the most effective AI algorithms for improving threat detection in real-time surveillance systems?</li>
+                        <li>How can AI-driven surveillance systems reduce response times to security incidents?</li>
+                        <li>What strategies can be employed to minimize false security alerts in AI-enabled surveillance systems?</li>
+                        <li>What are the key factors influencing the scalability of AI-enabled surveillance systems across different infrastructure types?</li>
+                    </ul>
+                `;
+                document.getElementById("infoDisplay").style.display = "block";
+            }
+            
+            function showMethodology() {
+                document.getElementById("infoDisplay").innerHTML = `
+                    <h3>Methodology</h3>
+                    <p>The project will implement an AI-enabled surveillance system using AI algorithms like YOLO for object detection, Autoencoders for anomaly detection, and CNNs for image classification. LSTM networks will be used for time-series analysis to predict potential security breaches based on historical data.</p>
+                    <p>Tools and technologies include Python, TensorFlow, PyTorch, edge devices (NVIDIA Jetson), IP cameras, motion sensors, cloud storage, and SQL databases for data management. Real-time dashboards will be developed using Power BI or Tableau.</p>
+                `;
+                document.getElementById("infoDisplay").style.display = "block";
+            }
+            
+            function showAIAlgorithms() {
+                document.getElementById("infoDisplay").innerHTML = `
+                    <h3>AI Algorithms</h3>
+                    <p>The system will utilize AI algorithms such as YOLO for object detection, Autoencoders for anomaly detection, and CNNs for image classification. Additionally, LSTM networks will be used for time-series analysis to predict potential security breaches based on historical data.</p>
+                `;
+                document.getElementById("infoDisplay").style.display = "block";
+            }
+            
+            function showDownloadDocumentation() {
+                modal.style.display = "block";
+                document.getElementById("modalTitle").innerHTML = "Download Documentation";
+                document.getElementById("modalMessage").innerHTML = "Proceed to download the system documentation?";
+                document.getElementById("proceedDownload").style.display = "block";
+                document.getElementById("cancelDownload").style.display = "block";
+            }
+            
+            function showUnderConstruction() {
+                modal.style.display = "block";
+                document.getElementById("modalTitle").innerHTML = "Under Construction";
+                document.getElementById("modalMessage").innerHTML = "This feature is currently under construction.";
+                document.getElementById("proceedDownload").style.display = "none";
+                document.getElementById("cancelDownload").style.display = "none";
+            }
+            
+            document.getElementById("proceedDownload").addEventListener("click", function() {
+                // Logic to download Proposal.pdf
+               document.location.href = "document.docx";
+                modal.style.display = "none";
+            });
+            
+            document.getElementById("cancelDownload").addEventListener("click", function() {
+                modal.style.display = "none";
+            });
+            
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+            
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
